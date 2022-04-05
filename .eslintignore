@@ -1,0 +1,7 @@
+build/*
+public/*
+src/react-app-env.d.ts
+src/serviceWorker.ts
+e2e
+.storybook/*
+src/index.tsx
