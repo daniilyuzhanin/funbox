@@ -1,12 +1,11 @@
+import { Layout } from 'common/components/Layout';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-function App() {
-  return (
-    <BrowserRouter>
-      Ola!
-    </BrowserRouter>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Layout />
+  </BrowserRouter>
+);
 
 export default App;
