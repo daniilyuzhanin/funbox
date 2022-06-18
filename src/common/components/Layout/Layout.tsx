@@ -11,7 +11,7 @@ export const Layout = ({ children }: PropsWithChildren<{}>) => {
     <Grid container>
       <Grid item>Ты сегодня покормил кота?</Grid>
       <Grid container>
-        Card container
+        Card container!
       </Grid>
     </Grid>
   );
