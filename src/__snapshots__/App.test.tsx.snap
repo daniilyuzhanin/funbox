@@ -2,6 +2,25 @@
 
 exports[`renders home page 1`] = `
 <div>
-  Ola!
+  <div
+    class="MuiGrid-root MuiGrid-container makeStyles-wrapper-1 css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-layout-2 css-1vpwcmr-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item makeStyles-layoutTitle-3 css-10omzie-MuiGrid-root"
+      >
+        Ты сегодня покормил кота?
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-1lym95h-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;

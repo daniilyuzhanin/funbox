@@ -1,4 +1,4 @@
-import { Grid, Box } from '@mui/material';
+import { Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React, { PropsWithChildren } from 'react';
 
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     zIndex: 3,
   },
-  layoutTitleText: {
+  layoutTitle: {
     fontFamily: '"Exo 2", sans-serif',
     fontSize: theme.spacing(18),
     fontWeight: 100,
@@ -40,16 +40,15 @@ export const Layout = ({ children }: PropsWithChildren<{}>) => {
   const {
     wrapper,
     layout,
-    layoutTitleText,
+    layoutTitle,
   } = classes;
 
   return (
     <Grid container className={wrapper}>
       <Grid container direction="column" className={layout}>
-        <Grid item textAlign="center" className={layoutTitleText}>Ты сегодня покормил кота?</Grid>
+        <Grid item textAlign="center" className={layoutTitle}>Ты сегодня покормил кота?</Grid>
         <Grid container justifyContent="center">
-          <Grid item>Card container!</Grid>
-          <Box style={{ textShadow: '0px 1px 1px #000000' }}>Ты сегодня покормил кота?</Box>
+          <Grid item>{children}</Grid>
         </Grid>
       </Grid>
     </Grid>
