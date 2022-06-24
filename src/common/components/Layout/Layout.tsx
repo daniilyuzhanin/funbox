@@ -1,6 +1,10 @@
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
+
+export type LayoutType = {
+  children?: ReactNode,
+};
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -27,15 +31,12 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 3,
   },
   layoutTitle: {
-    fontFamily: '"Exo 2", sans-serif',
-    fontSize: theme.spacing(18),
-    fontWeight: 100,
     textShadow: '0px 1px 1px #000000',
     paddingBottom: theme.spacing(12),
   },
 }));
 
-export const Layout = ({ children }: PropsWithChildren<{}>) => {
+export const Layout = ({ children }: LayoutType) => {
   const classes = useStyles();
   const {
     wrapper,
@@ -46,9 +47,11 @@ export const Layout = ({ children }: PropsWithChildren<{}>) => {
   return (
     <Grid container className={wrapper}>
       <Grid container direction="column" className={layout}>
-        <Grid item textAlign="center" className={layoutTitle}>Ты сегодня покормил кота?</Grid>
-        <Grid container justifyContent="center">
-          <Grid item>{children}</Grid>
+        <Typography variant="h2" textAlign="center" className={layoutTitle}>
+          Ты сегодня покормил кота?
+        </Typography>
+        <Grid container justifyContent="space-around">
+          {children}
         </Grid>
       </Grid>
     </Grid>
