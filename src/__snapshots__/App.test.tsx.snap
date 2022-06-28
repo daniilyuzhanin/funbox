@@ -8,17 +8,276 @@ exports[`renders home page 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-layout-2 css-1vpwcmr-MuiGrid-root"
     >
-      <div
-        class="MuiGrid-root MuiGrid-item makeStyles-layoutTitle-3 css-10omzie-MuiGrid-root"
+      <h2
+        class="MuiTypography-root MuiTypography-h2 makeStyles-layoutTitle-3 css-1q1cia6-MuiTypography-root"
       >
         Ты сегодня покормил кота?
-      </div>
+      </h2>
       <div
-        class="MuiGrid-root MuiGrid-container css-1lym95h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container css-11j0bs5-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-        />
+          class="MuiGrid-root MuiGrid-item MuiGrid-direction-xs-column makeStyles-cardWrapper-4 css-77k4nk-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            style="position: absolute; width: 18px; height: 18px; cursor: default;"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-cardContainer-5 makeStyles-cardContainerColor-7 () => {} css-1vpwcmr-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 makeStyles-cardContainerText-10 css-16dqiha-MuiTypography-root"
+            >
+              Сказочное заморское явство
+            </p>
+            <h1
+              class="MuiTypography-root MuiTypography-h1 makeStyles-cardContainerTitle-9 css-1ea121w-MuiTypography-root"
+            >
+              Нямушка
+            </h1>
+            <h3
+              class="MuiTypography-root MuiTypography-h3 makeStyles-cardContainerTitle-9 css-xos6za-MuiTypography-root"
+            >
+              с фуа-гра
+            </h3>
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-cardContainerText-10 css-1vpwcmr-MuiGrid-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-1r40cs2-MuiTypography-root"
+              >
+                <span
+                  class="makeStyles-cardContainerBoldText-14"
+                >
+                  10
+                </span>
+                 порций
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-1r40cs2-MuiTypography-root"
+              >
+                мышь в подарок
+              </p>
+            </div>
+            <img
+              alt="cat"
+              class="makeStyles-cardContainerImage-12"
+              src="/cat.png"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item makeStyles-cardContainerWeight-13 css-10omzie-MuiGrid-root"
+            >
+              0,5
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1 css-10jvl1m-MuiTypography-root"
+              >
+                кг
+              </h6>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-shopText-15 css-ny75tw-MuiGrid-root"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle2 css-fwyfg-MuiTypography-root"
+            >
+              Чего сидишь? Порадуй котэ, 
+            </h6>
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle2 makeStyles-shopTextLink-16 css-fwyfg-MuiTypography-root"
+            >
+              купи.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-direction-xs-column makeStyles-cardWrapper-4 css-77k4nk-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            style="position: absolute; width: 18px; height: 18px; cursor: default;"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-cardContainer-5 makeStyles-cardContainerColor-7 () => {} css-1vpwcmr-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 makeStyles-cardContainerText-10 css-16dqiha-MuiTypography-root"
+            >
+              Сказочное заморское явство
+            </p>
+            <h1
+              class="MuiTypography-root MuiTypography-h1 makeStyles-cardContainerTitle-9 css-1ea121w-MuiTypography-root"
+            >
+              Нямушка
+            </h1>
+            <h3
+              class="MuiTypography-root MuiTypography-h3 makeStyles-cardContainerTitle-9 css-xos6za-MuiTypography-root"
+            >
+              с рыбой
+            </h3>
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-cardContainerText-10 css-1vpwcmr-MuiGrid-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-1r40cs2-MuiTypography-root"
+              >
+                <span
+                  class="makeStyles-cardContainerBoldText-14"
+                >
+                  40
+                </span>
+                 порций
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-1r40cs2-MuiTypography-root"
+              >
+                <span
+                  class="makeStyles-cardContainerBoldText-14"
+                >
+                  2
+                </span>
+                 мыши в подарок
+              </p>
+            </div>
+            <img
+              alt="cat"
+              class="makeStyles-cardContainerImage-12"
+              src="/cat.png"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item makeStyles-cardContainerWeight-13 css-10omzie-MuiGrid-root"
+            >
+              2
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1 css-10jvl1m-MuiTypography-root"
+              >
+                кг
+              </h6>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-shopText-15 css-ny75tw-MuiGrid-root"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle2 css-fwyfg-MuiTypography-root"
+            >
+              Чего сидишь? Порадуй котэ, 
+            </h6>
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle2 makeStyles-shopTextLink-16 css-fwyfg-MuiTypography-root"
+            >
+              купи.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-direction-xs-column makeStyles-cardWrapper-4 css-77k4nk-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            style="position: absolute; width: 18px; height: 18px; cursor: default;"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-cardContainer-5 makeStyles-cardContainerColor-7 () => {} css-1vpwcmr-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 makeStyles-cardContainerText-10 css-16dqiha-MuiTypography-root"
+            >
+              Сказочное заморское явство
+            </p>
+            <h1
+              class="MuiTypography-root MuiTypography-h1 makeStyles-cardContainerTitle-9 css-1ea121w-MuiTypography-root"
+            >
+              Нямушка
+            </h1>
+            <h3
+              class="MuiTypography-root MuiTypography-h3 makeStyles-cardContainerTitle-9 css-xos6za-MuiTypography-root"
+            >
+              с курой
+            </h3>
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column makeStyles-cardContainerText-10 css-1vpwcmr-MuiGrid-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-1r40cs2-MuiTypography-root"
+              >
+                <span
+                  class="makeStyles-cardContainerBoldText-14"
+                >
+                  100
+                </span>
+                 порций
+              </p>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1r40cs2-MuiTypography-root"
+                >
+                  <span
+                    class="makeStyles-cardContainerBoldText-14"
+                  >
+                    5
+                  </span>
+                   мышей в подарок
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1r40cs2-MuiTypography-root"
+                >
+                  заказчик доволен
+                </p>
+              </div>
+            </div>
+            <img
+              alt="cat"
+              class="makeStyles-cardContainerImage-12"
+              src="/cat.png"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item makeStyles-cardContainerWeight-13 css-10omzie-MuiGrid-root"
+            >
+              5
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1 css-10jvl1m-MuiTypography-root"
+              >
+                кг
+              </h6>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-shopText-15 css-ny75tw-MuiGrid-root"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle2 css-fwyfg-MuiTypography-root"
+            >
+              Чего сидишь? Порадуй котэ, 
+            </h6>
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle2 makeStyles-shopTextLink-16 css-fwyfg-MuiTypography-root"
+            >
+              купи.
+            </h6>
+          </div>
+        </div>
       </div>
     </div>
   </div>
