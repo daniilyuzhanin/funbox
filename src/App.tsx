@@ -11,15 +11,16 @@ declare module '@mui/styles/defaultTheme' {
 const theme = createTheme({
   palette: {
     primary: {
+      main: '#1698d9',
+      dark: '#2EA8E6',
       light: '#fff',
       contrastText: '#000000',
-      main: '#1698d9',
-      dark: '#002884',
     },
     secondary: {
       light: '#F2F2F2',
       contrastText: '#666666',
-      main: '#11cb5f',
+      main: '#D91667',
+      dark: '#E52E7A',
     },
   },
   spacing: 2,
@@ -28,6 +29,7 @@ const theme = createTheme({
     h1: {
       fontSize: 48,
       fontWeight: 700,
+      ineHeight: '56px',
     },
     h2: {
       fontSize: 36,
@@ -36,9 +38,18 @@ const theme = createTheme({
     h3: {
       fontSize: 24,
       fontWeight: 700,
+      ineHeight: '28px',
     },
     subtitle1: {
       fontSize: 22,
+    },
+    subtitle2: {
+      fontSize: 13,
+      lineHeight: '15px',
+    },
+    body2: {
+      fontSize: 14,
+      lineHeight: '16px',
     },
   },
 });
@@ -47,9 +58,9 @@ const App = () => (
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <Layout>
-        <ProductCard filler="с фуа-гра" weight="0,5" />
-        <ProductCard filler="с рыбой" weight={2} />
-        <ProductCard filler="с курой" weight={5} />
+        <ProductCard filler="с фуа-гра" weight="0,5" count={10} description="Печень утки разварная с артишоками." />
+        <ProductCard filler="с рыбой" weight={2} count={40} description="Головы щучьи с чесноком да свежайшая сёмгушка." />
+        <ProductCard filler="с курой" weight={5} count={100} description="Филе из цыплят с трюфелями в бульоне." />
       </Layout>
     </ThemeProvider>
   </BrowserRouter>
