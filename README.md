@@ -1,10 +1,16 @@
 # FUNBOX
 
+---
+
 In this project I used technoligies such as React, Typescript, Material UI(v5).
+
+_If you want to make the product card inaccessible, you need to click on the button, which loacted on the left in the upper part of the product card block:)_
 
 ---
 
-_If you want to make the product card inaccessible, you need to click on the button, which loacted on the left in the upper part of the product card block:)_
+##Current build: https://funbox-cat-cards.web.app/
+
+---
 
 ## Final result:
 
