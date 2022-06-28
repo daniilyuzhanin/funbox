@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, IconButton } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react';
 
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   cardWrapper: {
     width: theme.spacing(160),
     height: theme.spacing(255),
+    position: 'relative',
   },
 
   cardContainer: {
@@ -40,6 +41,34 @@ const useStyles = makeStyles((theme) => ({
 
     '& > *': {
       zIndex: 10,
+    },
+  },
+
+  cardContainerDisabled: {
+    background: `${theme.palette.error.main}!important`,
+
+    '& > *': {
+      color: `${theme.palette.error.main}!important`,
+    },
+
+    '& $cardContainerWeight': {
+      background: `${theme.palette.error.dark}!important`,
+      color: `${theme.palette.primary.light}!important`,
+    },
+
+    '&::after': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      height: theme.spacing(236),
+      width: theme.spacing(156),
+      background: theme.palette.secondary.light,
+      clipPath: 'inherit',
+      borderRadius: theme.spacing(5),
+      zIndex: 15,
+      opacity: '0.45',
     },
   },
 
@@ -87,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cardContainerTextHovered: {
-    color: '#E62E7A',
+    color: theme.palette.info.main,
   },
 
   cardContainerImage: {
@@ -138,6 +167,9 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  shopTextDisabled: {
+    color: `${theme.palette.info.light}`,
+  },
 }));
 
 export const ProductCard = ({
@@ -148,11 +180,16 @@ export const ProductCard = ({
 }: ProductCardType) => {
   const [isChoosen, setIsChoosen] = useState(false);
   const [isChangeColor, setIsChangeColor] = useState(false);
-  const [isTesting, setIsTesting] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const noop = () => {};
+
+  const disableButton = () => setIsDisabled(!isDisabled);
 
   const chooseCard = () => {
     if (isChangeColor) {
-      setIsTesting(false);
+      setIsHovered(false);
     }
     return setIsChoosen(!isChoosen);
   };
@@ -162,8 +199,8 @@ export const ProductCard = ({
   };
   const onClickShopLink = () => setIsChangeColor(!isChangeColor);
 
-  const newTest = () => (isChangeColor
-    ? setIsTesting(true) : setIsTesting(false));
+  const onHover = () => (isChangeColor
+    ? setIsHovered(true) : setIsHovered(false));
 
   const classes = useStyles();
   const {
@@ -177,15 +214,17 @@ export const ProductCard = ({
     cardContainerColorChanged,
     cardContainerBoldText,
     cardContainerTextHovered,
+    cardContainerDisabled,
     shopText,
     shopTextLink,
+    shopTextDisabled,
   } = classes;
 
-  const a = () => setIsTesting(false);
+  const deleteHoverEffect = () => setIsHovered(false);
 
   const selectRightClass = isChangeColor
     ? cardContainerColorChanged : cardContainerColor;
-  const mouseLeaving = isChoosen ? changeColor : a;
+  const mouseLeaving = isChoosen ? changeColor : deleteHoverEffect;
 
   const mousesGiftCount = (foodCount: string | number) => {
     if (foodCount < 40) {
@@ -201,17 +240,30 @@ export const ProductCard = ({
       </Grid>);
   };
 
+  const choosingRightShopText = () => (isChangeColor ? <Typography className={shopText} textAlign="center" variant="subtitle2">{description}</Typography>
+    : <Grid className={shopText} display="flex" justifyContent="center"><Typography variant="subtitle2">Чего сидишь? Порадуй котэ,&nbsp;</Typography><Typography onClick={onClickShopLink} className={shopTextLink} variant="subtitle2">купи.</Typography></Grid>);
+  const disableShopText = () => (isDisabled ? <Typography className={`${shopText} ${shopTextDisabled}`} textAlign="center" variant="subtitle2">Печалька, {filler} закончился.</Typography> : choosingRightShopText());
+
   return (
     <Grid item className={cardWrapper} direction="column" mb={7}>
+      <IconButton
+        onClick={disableButton}
+        style={{
+          position: 'absolute',
+          width: '18px',
+          height: '18px',
+          cursor: 'default',
+        }}
+      />
       <Grid
         container
         direction="column"
-        className={`${cardContainer} ${selectRightClass}`}
-        onClick={chooseCard}
-        onMouseEnter={newTest}
-        onMouseLeave={mouseLeaving}
+        className={`${cardContainer} ${selectRightClass} ${isDisabled ? cardContainerDisabled : noop}`}
+        onClick={isDisabled ? noop : chooseCard}
+        onMouseEnter={isDisabled ? noop : onHover}
+        onMouseLeave={isDisabled ? noop : mouseLeaving}
       >
-        {isTesting
+        {isHovered
           ? <Typography className={`${cardContainerText} ${cardContainerTextHovered}`}>Котэ не одобряет?</Typography> : <Typography className={cardContainerText}>Сказочное заморское явство</Typography>}
         <Typography variant="h1" className={cardContainerTitle}>Нямушка</Typography>
         <Typography variant="h3" className={cardContainerTitle}>{filler}</Typography>
@@ -225,8 +277,7 @@ export const ProductCard = ({
           <Typography variant="subtitle1">кг</Typography>
         </Grid>
       </Grid>
-      {isChangeColor ? <Typography className={shopText} textAlign="center" variant="subtitle2">{description}</Typography>
-        : <Grid className={shopText} display="flex" justifyContent="center"><Typography variant="subtitle2">Чего сидишь? Порадуй котэ,&nbsp;</Typography><Typography onClick={onClickShopLink} className={shopTextLink} variant="subtitle2">купи.</Typography></Grid>}
+      {disableShopText()}
     </Grid>
   );
 };

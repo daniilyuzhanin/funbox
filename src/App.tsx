@@ -5,7 +5,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 declare module '@mui/styles/defaultTheme' {
-  interface DefaultTheme extends Theme {}
+  interface DefaultTheme extends Theme { }
 }
 
 const theme = createTheme({
@@ -21,6 +21,14 @@ const theme = createTheme({
       contrastText: '#666666',
       main: '#D91667',
       dark: '#E52E7A',
+    },
+    info: {
+      main: '#E62E7A',
+      light: '#FFFF66',
+    },
+    error: {
+      main: '#B3B3B3',
+      dark: '#979797',
     },
   },
   spacing: 2,
